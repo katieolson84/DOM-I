@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street\n Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -69,43 +69,52 @@ button.textContent = siteContent["cta"]["button"];
 
 // top content section
 
-// features section
-// const features = document.querySelector(".text-content");
-// features.classLIst.add("tcl");
 
-// features.textContent = siteContent["main-content"]["features-h4"];
-const features = document.querySelector(".text-content:nth-of-type(1) h4");
-features.textContent = siteContent["main-content"]["features-h4"];
+// features
+document.getElementsByTagName('h4')[0].textContent = siteContent["main-content"]["features-h4"]
 
-const featuresContent = document.querySelector(".text-content:nth-of-type(1) p");
-featuresContent.textContent = siteContent["main-content"]["features-content"];
-// about section
-const about = document.querySelector(".text-content:nth-of-type(2) h4");
-about.textContent = siteContent["main-content"]["about-h4"];
+document.getElementsByTagName('p')[0].textContent = siteContent["main-content"]["features-content"]
 
-const aboutContent = document.querySelector(".text-content:nth-of-type(2) p");
-aboutContent.textContent = siteContent["main-content"]["about-content"];
+// objects
+document.getElementsByTagName('h4')[1].textContent = siteContent["main-content"]["about-h4"]
 
+document.getElementsByTagName('p')[1].textContent = siteContent["main-content"]["about-content"]
 
+// middle image banner
 
+let banner = document.getElementById("middle-img");
+banner.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
+// bottom section
+// services
+document.getElementsByTagName('h4')[2].textContent = siteContent["main-content"]["services-h4"]
 
+document.getElementsByTagName('p')[2].textContent = siteContent["main-content"]["services-content"]
+// product
+document.getElementsByTagName('h4')[3].textContent = siteContent["main-content"]["product-h4"]
 
+document.getElementsByTagName('p')[3].textContent = siteContent["main-content"]["product-content"]
+// vision
+document.getElementsByTagName('h4')[4].textContent = siteContent["main-content"]["vision-h4"]
 
+document.getElementsByTagName('p')[4].textContent = siteContent["main-content"]["vision-content"]
 
+// contact section
+let contact = document.querySelector(".contact h4");
+contact.textContent = siteContent["contact"]["contact-h4"];
+// address
+let address = contact.nextElementSibling;
+address.innerText = siteContent["contact"]["address"];
+// phone
+let phone = address.nextElementSibling;
+phone.textContent = siteContent["contact"]["phone"];
+// email
+let email = phone.nextElementSibling;
+email.textContent = siteContent["contact"]["email"];
 
-
-
-
-
-// const about = features.cloneNode(true);
-// document.querySelector(".top-content").appendChild(about);
-// about.textContent = siteContent["main-content"]["about-h4"];
-
-// const aboutContent = featuresContent.cloneNode(true);
-// document.querySelector(".top-content").appendChild(aboutContent);
-// aboutContent.textContent = siteContent["main-content"]["about-content"];
-
+// footer
+let footer = document.querySelector("footer p");
+footer.textContent = siteContent["footer"]["copyright"];
 
 
 

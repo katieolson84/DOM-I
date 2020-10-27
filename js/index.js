@@ -37,6 +37,62 @@ const siteContent = {
   },
 };
 
+
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const header = document.querySelector("header"
+);
+const nav = document.querySelector("nav");
+let nav1 = document.querySelector(" header nav a");
+nav1.textContent = siteContent["nav"]["nav-item-1"];
+let nav2 = nav1.nextElementSibling;
+nav2.textContent = siteContent["nav"]["nav-item-2"];
+let nav3 = nav2.nextElementSibling;
+nav3.textContent = siteContent["nav"]["nav-item-3"];
+let nav4 = nav3.nextElementSibling;
+nav4.textContent = siteContent["nav"]["nav-item-4"];
+let nav5 = nav4.nextElementSibling;
+nav5.textContent = siteContent["nav"]["nav-item-5"];
+let nav6 = nav5.nextElementSibling;
+nav6.textContent = siteContent["nav"]["nav-item-6"];
+
+let logo = document.querySelector("header img");
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+let bigLogo = document.getElementById("cta-img");
+bigLogo.setAttribute('src', siteContent["cta"]["img-src"]);
+
+const title = document.querySelector(".cta-text h1");
+title.textContent = siteContent["cta"]["h1"];
+
+const button = document.querySelector(".cta-text button");
+button.textContent = siteContent ["cta"]["button"];
+
+// top content section
+
+
+const features = document.querySelector(".top-content h4:nth-of-type(1)");
+features.textContent = siteContent["main-content"]["features-h4"];
+
+const featuresContent = document.querySelector(".top-content p:nth-of-type(1)");
+featuresContent.textContent = siteContent["main-content"]["features-content"];
+
+const about = document.querySelector(".top-content h4:nth-of-type(2)");
+about.textContent = siteContent["main-content"]["about-h4"];
+
+const aboutContent = document.querySelector(".top-content p:nth-of-type(2)");
+aboutContent.textContent = siteContent["main-content"]["about-content"];
+
+
+// const about = features.cloneNode(true);
+// document.querySelector(".top-content").appendChild(about);
+// about.textContent = siteContent["main-content"]["about-h4"];
+
+// const aboutContent = featuresContent.cloneNode(true);
+// document.querySelector(".top-content").appendChild(aboutContent);
+// aboutContent.textContent = siteContent["main-content"]["about-content"];
+
+
+
+
+

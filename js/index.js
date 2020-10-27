@@ -39,9 +39,7 @@ const siteContent = {
 
 
 // Example: Update the img src for the logo
-
-const header = document.querySelector("header"
-);
+// nav
 const nav = document.querySelector("nav");
 let nav1 = document.querySelector(" header nav a");
 nav1.textContent = siteContent["nav"]["nav-item-1"];
@@ -55,33 +53,49 @@ let nav5 = nav4.nextElementSibling;
 nav5.textContent = siteContent["nav"]["nav-item-5"];
 let nav6 = nav5.nextElementSibling;
 nav6.textContent = siteContent["nav"]["nav-item-6"];
-
+// logo
 let logo = document.querySelector("header img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
-
+// big logo
 let bigLogo = document.getElementById("cta-img");
 bigLogo.setAttribute('src', siteContent["cta"]["img-src"]);
-
+// title
 const title = document.querySelector(".cta-text h1");
 title.textContent = siteContent["cta"]["h1"];
-
+// button
 const button = document.querySelector(".cta-text button");
-button.textContent = siteContent ["cta"]["button"];
+button.textContent = siteContent["cta"]["button"];
+
 
 // top content section
 
+// features section
+// const features = document.querySelector(".text-content");
+// features.classLIst.add("tcl");
 
-const features = document.querySelector(".top-content h4:nth-of-type(1)");
+// features.textContent = siteContent["main-content"]["features-h4"];
+const features = document.querySelector(".text-content:nth-of-type(1) h4");
 features.textContent = siteContent["main-content"]["features-h4"];
 
-const featuresContent = document.querySelector(".top-content p:nth-of-type(1)");
+const featuresContent = document.querySelector(".text-content:nth-of-type(1) p");
 featuresContent.textContent = siteContent["main-content"]["features-content"];
-
-const about = document.querySelector(".top-content h4:nth-of-type(2)");
+// about section
+const about = document.querySelector(".text-content:nth-of-type(2) h4");
 about.textContent = siteContent["main-content"]["about-h4"];
 
-const aboutContent = document.querySelector(".top-content p:nth-of-type(2)");
+const aboutContent = document.querySelector(".text-content:nth-of-type(2) p");
 aboutContent.textContent = siteContent["main-content"]["about-content"];
+
+
+
+
+
+
+
+
+
+
+
 
 
 // const about = features.cloneNode(true);

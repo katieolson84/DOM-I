@@ -53,6 +53,19 @@ let nav5 = nav4.nextElementSibling;
 nav5.textContent = siteContent["nav"]["nav-item-5"];
 let nav6 = nav5.nextElementSibling;
 nav6.textContent = siteContent["nav"]["nav-item-6"];
+
+// new link after
+const navLink= document.createElement("a");
+navLink.textContent = "FAQ";
+navLink.href = "#";
+document.querySelector("nav").appendChild(navLink);{[]}
+
+// new link before
+const navLink2= document.createElement("a");
+navLink2.textContent = "Help";
+navLink2.href = "#";
+document.querySelector("nav").prepend(navLink2);
+
 // logo
 let logo = document.querySelector("header img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
